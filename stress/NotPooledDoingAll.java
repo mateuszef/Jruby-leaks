@@ -31,7 +31,7 @@ public class NotPooledDoingAll implements StressTest {
 
 	@Override
 	public void go(Writer out) {
-
+		out.close();
 		Thread terminator = new Thread(new Runnable() {
 
 			@Override
