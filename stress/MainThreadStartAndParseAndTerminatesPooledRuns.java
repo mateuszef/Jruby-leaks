@@ -32,6 +32,7 @@ public class MainThreadStartAndParseAndTerminatesPooledRuns implements StressTes
 
 	@Override
 	public void go(Writer out) {
+		out.close();
 		final int idd = id.getAndIncrement();
 		logger.debug("{} Created and initializated SC", idd);
 		sc = new ScriptingContainer(LocalContextScope.SINGLETHREAD);
