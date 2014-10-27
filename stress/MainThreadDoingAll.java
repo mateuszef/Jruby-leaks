@@ -26,6 +26,7 @@ public class MainThreadDoingAll implements StressTest {
 
 	@Override
 	public void go(Writer out) {
+		out.close();
 		logger.debug("{} Created and initializated SC", idd);
 		ScriptingContainer sc = new ScriptingContainer(LocalContextScope.SINGLETHREAD);
 		sc.getProvider().getRubyInstanceConfig().setCompileMode(CompileMode.OFF);
