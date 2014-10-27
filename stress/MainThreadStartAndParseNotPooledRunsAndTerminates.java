@@ -29,6 +29,7 @@ public class MainThreadStartAndParseNotPooledRunsAndTerminates implements Stress
 
 	@Override
 	public void go(Writer out) {
+		out.close();
 		logger.debug("{} Created and initializated SC", idd);
 		sc = new ScriptingContainer(LocalContextScope.SINGLETHREAD);
 		sc.getProvider().getRubyInstanceConfig().setCompileMode(CompileMode.OFF);
