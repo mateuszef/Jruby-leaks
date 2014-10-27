@@ -33,6 +33,7 @@ public class ConcurrentPooledDoingAll implements StressTest {
 
 	@Override
 	public void go(Writer out) {
+		out.close();
 
 		try {
 			semaphore.acquire();
