@@ -32,6 +32,7 @@ public class SequentialPooledDoingAll implements StressTest {
 
 	@Override
 	public void go(Writer out) {
+		out.close();
 		executor.execute(new Runnable() {
 
 			@Override
